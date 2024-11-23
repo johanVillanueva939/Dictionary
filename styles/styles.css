@@ -1,0 +1,204 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+	--principal-background-blue:#156082;
+	--background-blue:#15608282;
+	--second:#00aeff;
+	--font-color: #00ff2a;
+    --font-color2:#15e4ff;
+}
+::placeholder{
+	color: var(--background-blue);
+}
+body{
+	width: 100dvw;
+	height: 100vh;
+}
+button{
+	cursor: pointer;
+	padding: 13px 50px;
+	border-radius: 1000px ;
+	border: none;
+	color:white;
+	font-size: 17px;
+	background-color: var(--principal-background-blue);
+}
+.label{
+	padding: 5px 15px 5px 0;
+}
+.radio, .label{
+	cursor: pointer;
+}
+.insert{
+	width: 100%;
+	padding: 50px 0 50px 40px;
+}
+.all{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	width: fit-content;
+	justify-self: center;
+	gap: 100px;
+	align-items: center;
+}
+.word{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.word > div:nth-child(1){
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 15px;
+}
+.word > div:nth-child(1) > div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.word > div:nth-child(1) > div label{
+	padding: 0;
+}
+.word > div:nth-child(2){
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+.input{
+	padding: 5px 0 5px 4px;
+	border-radius: 10px;
+	border: 2px solid var(--principal-background-blue);
+	outline: none;
+}
+.right{
+	padding: 50px 0 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	align-content: center;
+	justify-content: center;
+}
+.card {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	width: 300px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+	align-content: center;
+}
+#btnReset{
+    height: 50px;
+    background: url('https://cdn-icons-png.flaticon.com/128/7794/7794645.png');
+    border-radius: 1000px;
+    background-position: center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-color: var(--font-color2);
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+#btnReset:hover{
+    box-shadow: 0px 0px 15px 0px var(--font-color2);
+}
+.adder{
+	display: none;
+}
+.adder > section{ 
+	position: fixed; 
+	left: 50%; 
+	top: 50%; 
+	transform: translate(-50%, -50%); 
+	background-color: white; 
+	padding: 20px; 
+	box-shadow: 0px 0px 1000px rgb(0, 0, 0); 
+	z-index: 1000; 
+	border-radius:7px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+.adder> section > section{
+	display: grid;
+	grid-template-columns: repeat(2,auto);
+	gap: 50px;
+	align-items: center;
+}
+.adder> section > section > section:nth-child(1){
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.adder > section > section > section:nth-child(1) > section{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+.adder > section > section > section:nth-child(1) > section > div, .adder > section > section > section:nth-child(1) > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+textarea{
+	resize: none;
+	width: 300px;
+	height: 50px;
+	padding: 5px 0 5px 4px;
+	border-radius: 10px;
+	border: 2px solid var(--principal-background-blue);
+	outline: none;
+}
+#close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	color: crimson;
+}
+#btn_add_word{
+	margin: 10px 0 0 0;
+	padding: 5px 10px;
+}
+#btnReset{
+	width: fit-content;
+	padding: 10px 25px;
+}
+@media screen and (max-width:590px) {
+	.all{
+		grid-template-columns: auto;
+		gap: 40px;
+	}
+	.all > section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.insert{
+		display: flex;
+		justify-content: center;
+		padding: 50px 0;
+		align-items: center;
+	}
+}
+@media screen and (max-width:530px) {
+	.adder> section > section{
+		grid-template-columns: auto;
+	}
+	.adder> section > section > section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

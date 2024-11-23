@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="assets/favicon/book.webp" type="image/x-icon">
+    <title>Dictionary</title>
+</head>
+
+<body>
+    <!-- <header><h1>Dictionary</h1></header> -->
+    <button id="btnReset"></button>
+    <main>
+        <!-- Add a new word -->
+        <section class="insert">
+            <button id="add">Add New Word</button>
+        </section>
+        <section class="all">
+            <!-- Order by A-Z or Z-A -->
+            <section class="order_by">
+                <div>
+                    <div>
+                        <input type="radio" class="radio" name="orderby" id="A-Z">
+                        <label class="label" for="A-Z">A-Z</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="radio" name="orderby" id="Z-A">
+                        <label class="label" for="Z-A">Z-A</label>
+                    </div>
+                </div>
+            </section>
+            <!-- Select languaje to word -->
+            <section class="word">
+                <div>
+                    <div>
+                        <input type="radio" class="radio" name="languaje" id="spanish">
+                        <label class="label" for="spanish">Español-Ingles</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="radio" name="languaje" id="english">
+                        <label class="label" for="english">English-Spanish</label>
+                    </div>
+                </div>
+                <!-- Input for insert word  -->
+                <div>
+                    <div>
+                        <input type="text" id="input" class="input" placeholder="Insert the word">
+                    </div>
+                    <button id="button">Search</button>
+                </div>
+            </section>
+            <!-- Section for categories -->
+            <section>
+                <div>
+                    <input type="radio" class="radio" name="categories" id="Fruits">
+                    <label class="label" for="Fruits">Fruits</label>
+                </div>
+                <div>
+                    <input type="radio" class="radio" name="categories" id="Colors">
+                    <label class="label" for="Colors">Colors</label>
+                </div>
+                <div>
+                    <input type="radio" class="radio" name="categories" id="Description">
+                    <label class="label" for="Description">Phisics descriptions</label>
+                </div>
+                <div>
+                    <input type="radio" class="radio" name="categories" id="Animals">
+                    <label class="label" for="animals">animals</label>
+                </div>
+                <div>
+                    <input type="radio" class="radio" name="categories" id="Skills">
+                    <label class="label" for="Skills">Skills</label>
+                </div>
+            </section>
+        </section>
+        <!-- Section for add new words -->
+        <section class="adder" id="adder">
+            <section>
+                <h3>Add Word</h3>
+                <span id="close">X</span>
+                <section>
+                    <section>
+                        <section>
+                            <div>
+                                <label for="add_spanish">Spanish</label>
+                                <input type="text" name="add_spanish" id="add_spanish" class="input"
+                                    placeholder="Word in Spanish">
+                            </div>
+                            <div>
+                                <label for="add_english">English</label>
+                                <input type="text" name="add_english" id="add_english" class="input"
+                                    placeholder="Word in English">
+                            </div>
+                        </section>
+                        <div>
+                            <label for="example_new_word">Example</label>
+                            <textarea name="example_new_word" id="textareas" placeholder="Add the example of the word"></textarea>
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <input type="radio" class="fruits" name="categorie" id="fruits2">
+                            <label class="labels" for="fruits2">Fruits</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="colors" name="categorie" id="colors2">
+                            <label class="labels" for="colors2">Colors</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="physical_descriptions" name="categorie" id="physyc2">
+                            <label class="labels" for="physyc2">Phisics descriptions</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="animals" name="categorie" id="animals2">
+                            <label class="labels" for="animals2">Animals</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="skills" name="categorie" id="skills2">
+                            <label class="labels" for="skills2">Skills</label>
+                        </div>
+                        <div>
+                            <button id="btn_add_word">Add word</button>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section id="right" class="right">
+        </section>
+    </main>
+    <script type="module" src="Scripts/App.js"></script>
+    <script type="module" src="Scripts/dictionary.js"></script>
+</body>
+
+</html>

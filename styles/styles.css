@@ -119,13 +119,7 @@ button{
 .adder{
 	display: none;
 }
-.adder h3{
-	color: #011222;
-}
-.adder label {
-	color: #101720;
-}
-.adder input, .adder textarea{
+.adder input, .adder textarea, .adder label, .adder h3{
 	color: #011222;
 }
 .adder > section{ 
